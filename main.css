@@ -1,11 +1,47 @@
 body {
   background-color: rgba(0, 234, 255, 0.64);
+  margin-top: 10px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  color: black;
+}
+input {
+  border: 0;
+  padding: 10px;
+  font-size: 18px;
 }
 .button {
   border: none;
   height: 500px;
   width: 1000px;
-  font-size: 100px;
-  color: red;
-  background-color: blue;
+  font-size: 90px;
+  margin: 0;
+  color: white;
+  background-color: red;
+}
+h1 {
+  font-family: 'Chewy', cursive;
+  margin-top: 55px;
+  padding: 0;
+  font-size: 50px;
+}
+p {
+  font-size: 22px;
+  font-family: 'Architects Daughter', cursive;
+}
+header {
+  text-align: center;
+  background-size: cover;
+}
+.nav li{
+    display:inline;
+}
+.nav a {
+  color: white;
+  font-size: 21px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+  text-align: center;
 }
