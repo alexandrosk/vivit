@@ -7,45 +7,79 @@
     <meta name="description" content="Website">
     <meta name="author" content="JT">
     <title>VIVI T</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="main.css">
     <style>
+
     body{
-      margin-top: 64px;
+      margin-top: 10%;
+    }
+    p{
+      font-family: 'Droid serif', serif;
     }
     </style>
   </head>
 
   <body>
+    <script type = "text/javascript">
 
-    <SCRIPT>
-      function passWord() {
-        var testV = 1;
-        var pass1 = prompt('Please Enter Your Password',' ');
-        while (testV < 3) {
-          if (!pass1){
-            history.go(-1);
-          }
-          if (pass1.toLowerCase() == "vcaehj") {
-            alert('You Got it Right!');
-            window.open('vivit.html');
+      // Note: Like all Javascript password scripts, this is hopelessly insecure as the user can see
+      //the valid usernames/passwords and the redirect url simply with View Source.
+      // And the user can obtain another three tries simply by refreshing the page.
+      //So do not use for anything serious!
+
+      var count = 2;
+      function validate() {
+        var un = document.myform.username.value;
+        var pw = document.myform.pword.value;
+        var valid = false;
+
+        var unArray = ["JT", "Caroline", "Audrey", "Ejun", "Hanna", "Vivian"];  // as many as you like - no comma after final entry
+        var pwArray = ["panic!atthelogin", "panic!atthelogin", "panic!atthelogin", "panic!atthelogin", "panic!atthelogin", "panic!atthelogin"];  // the corresponding passwords;
+
+        for (var i=0; i <unArray.length; i++) {
+          if ((un == unArray[i]) && (pw == pwArray[i])) {
+            valid = true;
             break;
           }
-          testV+=1;
-          var pass1 =
-          prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-          }
-          if (pass1.toLowerCase()!="password" & testV ==3){
-            history.go(-1);
-            return " ";
-          }
+        }
+
+        if (valid) {
+          alert ("Login was successful");
+          window.location = "vivit.html";
+          return false;
+        }
+
+        var t = " tries";
+        if (count == 1) {t = " try"}
+
+        if (count >= 1) {
+          alert ("Invalid username and/or password.  You have " + count + t + " left.");
+          document.myform.username.value = "";
+          document.myform.pword.value = "";
+          setTimeout("document.myform.username.focus()", 25);
+          setTimeout("document.myform.username.select()", 25);
+          count --;
+        }
+
+        else {
+          alert ("Still incorrect! You have no more tries left!");
+          document.myform.username.value = "No more tries allowed!";
+          document.myform.pword.value = "";
+          document.myform.username.disabled = true;
+          document.myform.pword.disabled = true;
+          return false;
+        }
+
       }
-    </SCRIPT>
 
-    <CENTER>
-      <FORM>
-        <input class="button" type="button" value="Enter Protected Area" onClick="passWord()">
-      </FORM>
-    </CENTER>
+    </script>
 
+    <form name = "myform">
+      <p>ENTER USER NAME <input type="text" name="username"> <br /> <br />
+      ENTER PASSWORD <input type="password" name="pword"> <br />
+      <input type="button" value="Submit" name="Submit" onclick= "validate()">
+      </p>
+    </form>
   </body>
 </html>

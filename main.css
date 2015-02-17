@@ -11,14 +11,22 @@ input {
   padding: 10px;
   font-size: 18px;
 }
-.button {
-  border: none;
-  height: 500px;
-  width: 1000px;
-  font-size: 90px;
+form {
   margin: 0;
+  text-align: center;
+  border: none;
+  height: 42%;
+  width: 22%;
+  position: absolute;
+  left: 40%;
+  font-size: 90px;
   color: white;
   background-color: red;
+}
+input[type="button"]{
+  margin: 15px 0 0 0;
+  background-color: #B3B3B3;
+  color: rgb(0, 255, 85);
 }
 h1 {
   font-family: 'Chewy', cursive;
