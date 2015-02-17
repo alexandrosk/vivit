@@ -1,6 +1,6 @@
 body {
   background-color: rgba(0, 234, 255, 0.64);
-  margin-top: 10px;
+  margin-top: 0px;
   text-align: center;
   background-size: cover;
   background-position: center;
@@ -33,15 +33,4 @@ p {
 header {
   text-align: center;
   background-size: cover;
-}
-.nav li{
-    display:inline;
-}
-.nav a {
-  color: white;
-  font-size: 21px;
-  font-weight: bold;
-  padding: 14px 10px;
-  text-transform: uppercase;
-  text-align: center;
 }
