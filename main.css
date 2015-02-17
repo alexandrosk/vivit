@@ -1,8 +1,8 @@
 body {
   background-color: rgba(0, 234, 255, 0.64);
   margin: 0px;
-  text-align: center;
   background-size: cover;
+  text-align: center;
   background-position: center;
   color: black;
 }
@@ -32,15 +32,11 @@ h1 {
   font-family: 'Chewy', cursive;
   margin-top: 55px;
   padding: 0;
-  font-size: 50px;
+  font-size: 75px;
 }
 p {
-  font-size: 22px;
+  font-size: 42px;
   font-family: 'Architects Daughter', cursive;
-}
-header {
-  text-align: center;
-  background-size: cover;
 }
 
 .clearfix:after {
@@ -55,7 +51,7 @@ header {
 }
 
 .menu {
-    width:80%;
+    width:99%;
     margin:0px auto;
 }
 
@@ -66,7 +62,7 @@ header {
 
 .menu a {
     transition:all linear 0.15s;
-    color:#919191;
+    color:rgba(0, 255, 221, 0.69);
 }
 
 .menu li:hover > a, .menu .current-item > a {
